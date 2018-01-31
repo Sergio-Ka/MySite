@@ -1,0 +1,21 @@
+mixin percent-circle(percent)
+    -var dasharray, a, b, xcoordtext;
+    -a = percent*295/100;
+    -b = 295 - a;
+    -dasharray = a+" "+b;
+    -(percent<10 && percent>=0)?xcoordtext = "38%":xcoordtext = "25%";
+        svg(class="percentage perc-pie-chart__graphics")
+            circle(class="percentage__circle", r="45", cx="50%", cy="50%", stroke-dasharray= dasharray)
+            text(class="percentage__text", x= xcoordtext, y="66%")= percent
+
+div(class="perc-pie-chart")
+    +header-of-block("PERCENTAGES / PIE CHART")
+    +percent-circle(0)
+    +percent-circle(38)
+    +percent-circle(62)
+    +percent-circle(89)
+    svg(class="pie-chart perc-pie-chart__graphics")
+        circle(class="pie-chart__circle pie-chart__circle_color_grey", r="39", cx="50%", cy="50%")
+        circle(class="pie-chart__circle pie-chart__circle_color_red", r="39", cx="50%", cy="50%", stroke-dashoffset="112", stroke-dasharray="28 267")
+        circle(class="pie-chart__circle pie-chart__circle_color_green", r="39", cx="50%", cy="50%", stroke-dashoffset="85", stroke-dasharray="118 177")
+        circle(class="pie-chart__circle pie-chart__circle_color_light-grey", r="39", cx="50%", cy="50%", stroke-dashoffset="-30", stroke-dasharray="73 222")

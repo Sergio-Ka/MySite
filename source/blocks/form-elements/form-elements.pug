@@ -1,0 +1,30 @@
+div(class="form-elements")
+    +header-of-block("FORM ELEMENTS")
+    div(class="form-elements__left-block")
+        input(class="form-elements__input-text input-text", type="text", name="your-name", value="Your Name")/
+        div(class="form-elements__message input-message input-message_color_red") ERROR
+        input(class="form-elements__input-text input-text", type="text", name="your-email", value="Your Email")/
+        div(class="form-elements__message input-message input-message_color_green") THANKS!
+        textarea(class="form-elements__input-textarea input-text") Your Message
+        input(class="std-button std-button_color_green form-elements__button", type="submit", value="SUBMIT")/
+    div(class="form-elements__right-block")
+        +header-of-block("TOGGLES")
+        div(class="form-elements__positioner-1")
+            label(class="switch form-elements__switch")
+                input(class="switch__input", type="checkbox")/
+                span(class="switch__text", data-yes="ON", data-no="OFF")
+                span(class="switch__slider")
+            label(class="switch form-elements__switch")
+                input(class="switch__input", type="checkbox", checked)/
+                span(class="switch__text", data-yes="ON", data-no="OFF")
+                span(class="switch__slider")
+        +header-of-block("TICK BOXES")
+        div(class="form-elements__positioner-2")
+            div(class="tick-box")
+                input(class="tick-box__input", type="checkbox", id="c1", checked)/
+                label(for="c1")
+                    span(class="tick-box__circle-arrow")
+            div(class="tick-box")
+                input(class="tick-box__input", type="checkbox", id="c2")/
+                label(for="c2")
+                    span(class="tick-box__circle-arrow")

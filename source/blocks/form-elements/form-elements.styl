@@ -1,0 +1,175 @@
+.form-elements
+    position relative
+    min-height 336px
+
+.form-elements__left-block
+    float left
+    width 50%
+    margin-top 37px
+
+.form-elements__right-block
+    float right
+    width 48%
+    text-align center
+    padding 0 0 0 8px
+    margin-top 22px
+
+.form-elements__input-text
+    float left
+    width 65.18%
+    height 26px
+    margin 0 0 12px 0
+
+.form-elements__input-textarea
+    width 92%
+    height 78px
+    margin 0 0 0 0
+    padding-top 10px
+    
+.input-text
+    background #E5E5E5
+    color #888888
+    border none
+    border-radius 3px
+    font-family 'Lato', Sans Serif
+    font-size 0.77rem
+    font-weight normal
+    padding-left 13px
+
+.form-elements__button
+    float left
+    width 39.7306%
+    height 35px
+    margin 10px 0 0 57.4%
+
+.form-elements__message
+    float left
+    width 24.24%
+    height 23px
+    margin 0 0 0 2.69%
+
+.input-message
+    border-radius 3px
+    color #FFFFFF
+    font-weight bold
+    font-size 0.5rem
+    line-height 1.0rem
+    text-align center
+    letter-spacing 0.06rem
+    padding-top 5px
+
+.input-message_color_red:before
+    content ''
+    border 4px solid transparent
+    border-right 4px solid #E75735
+    position absolute
+    left 34.8969%
+    top 81px
+
+.input-message_color_green:before
+    content ''
+    border 4px solid transparent
+    border-right 4px solid #4EB7A8
+    position absolute
+    left 34.8969%
+    top 121px
+
+.input-message_color_red
+    background #E75735
+
+.input-message_color_green
+    background #4EB7A8
+
+.form-elements__positioner-1
+    padding 16px 0 22px 0
+
+.switch
+    position relative
+    width 60px
+    height 24px
+    border-radius 34px
+    cursor pointer
+    
+.form-elements__switch
+    display inline-block
+    margin: 0 7px 0 8px
+
+.switch__input
+    position absolute
+    top 0
+    left 0
+    opacity 0
+
+.switch__text
+    background-color #E5E5E5
+    border-radius inherit
+    color #FFFFFF
+    display block
+    font-size 0.6rem
+    font-weight bold
+    height inherit
+    position relative
+
+.switch__text:before
+.switch__text:after
+    position absolute
+    top 50%
+    margin-top -0.5em
+    line-height 1
+    transition inherit
+    
+.switch__text:before
+    content attr(data-no)
+    right 11px
+
+.switch__text:after
+    content attr(data-yes)
+    left 13px
+    color #FFFFFF
+    font-size 0.6rem
+    font-weight bold
+    opacity 0
+    
+.switch__input:checked ~ .switch__text
+    background-color #4EB7A8
+    
+.switch__input:checked ~ .switch__text:before
+    opacity 0
+    
+.switch__input:checked ~ .switch__text:after
+    opacity 1
+    
+.switch__slider
+    position absolute
+    top 3px
+    left 3px
+    height 18px
+    width 18px
+    background-color #FFFFFF
+    border-radius 100%
+    
+.switch__input:checked ~ .switch__slider
+    left 39px
+
+.switch__text, .switch__slider
+    transition: All 0.4s ease
+
+.tick-box
+    display inline-block
+
+.tick-box__input
+    display none
+    
+.tick-box__circle-arrow
+    display inline-block
+    width 23px
+    height 23px
+    margin-right 17px
+    background url(blocks/form-elements/images/tick-boxes.png) -30px 0 no-repeat
+    cursor pointer
+    
+.tick-box__input:checked + label span
+    background url(blocks/form-elements/images/tick-boxes.png) 0 0 no-repeat
+
+.form-elements__positioner-2
+    padding 19px 0 0 11px

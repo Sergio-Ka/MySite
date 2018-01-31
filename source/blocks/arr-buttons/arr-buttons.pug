@@ -1,0 +1,21 @@
+mixin arrow(direction, color)
+    -var ppoints;
+    -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
+        svg(class="arr-button__arrow")
+            polyline(points= ppoints, fill="none", stroke-width="4", stroke= color)
+
+div(class="arr-buttons")
+    +header-of-block("ARROW BUTTONS")
+    div(class="arr-buttons__positioner")
+        button(class="arr-button arr-buttons__arr-button arr-button_color_white")
+            +arrow("left","#4EB7A8")
+        button(class="arr-button arr-buttons__arr-button arr-button_color_white")
+            +arrow("right","#4EB7A8")
+        button(class="arr-button arr-buttons__arr-button arr-button_color_gray")
+            +arrow("left","#FFFFFF")
+        button(class="arr-button arr-buttons__arr-button arr-button_color_gray")
+            +arrow("right","#FFFFFF")
+        button(class="arr-button arr-buttons__arr-button arr-button_color_green")
+            +arrow("left","#FFFFFF")
+        button(class="arr-button arr-buttons__arr-button arr-button_color_green")
+            +arrow("right","#FFFFFF")

@@ -1,0 +1,12 @@
+import './index.styl';
+import './blocks/location/images/icon-1.png';
+import './blocks/location/images/icon-2.png';
+import './blocks/user-profile/images/FB.png';
+import './blocks/user-profile/images/FB_white.png';
+import './blocks/user-profile/images/TW.png';
+import './blocks/user-profile/images/TW_white.png';
+import './blocks/user-profile/images/DR.png';
+import './blocks/user-profile/images/DR_white.png';
+require('./blocks/sliders/sliders.js');
+require('./blocks/search-drop-down/search-drop-down.js');
+require('./blocks/calendar/calendar.js');
