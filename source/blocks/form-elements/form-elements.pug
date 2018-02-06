@@ -1,12 +1,14 @@
 div(class="form-elements")
     +header-of-block("FORM ELEMENTS")
-    div(class="form-elements__left-block")
-        input(class="form-elements__input-text input-text", type="text", name="your-name", value="Your Name")/
-        div(class="form-elements__message input-message input-message_color_red") ERROR
-        input(class="form-elements__input-text input-text", type="text", name="your-email", value="Your Email")/
-        div(class="form-elements__message input-message input-message_color_green") THANKS!
-        textarea(class="form-elements__input-textarea input-text") Your Message
-        input(class="std-button std-button_color_green form-elements__button", type="submit", value="SUBMIT")/
+    div(class="simple-form form-elements__left-block")
+        div(class="simple-form__message input-message input-message_color_red") ERROR
+            div(class="input-message__tail input-message__tail_color_red")
+        input(class="simple-form__input-text input-text", type="text", name="your-name", value="Your Name")/
+        div(class="simple-form__message input-message input-message_color_green") THANKS!
+            div(class="input-message__tail input-message__tail_color_green")
+        input(class="simple-form__input-text input-text", type="text", name="your-email", value="Your Email")/
+        textarea(class="simple-form__input-textarea input-text") Your Message
+        input(class="std-button std-button_color_green simple-form__button", type="submit", value="SUBMIT")/
     div(class="form-elements__right-block")
         +header-of-block("TOGGLES")
         div(class="form-elements__positioner-1")
