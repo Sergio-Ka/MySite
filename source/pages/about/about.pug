@@ -1,0 +1,33 @@
+extends ../template/template.pug
+
+block title
+	| My Syte - ABOUT
+
+block navigation
+	div(class="navigation__std-button")
+		button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='index.html'") MAIN
+	div(class="navigation__std-button")
+		button(class="std-button std-button_inactive-green", onclick="location.href='about.html'") ABOUT
+	div(class="navigation__std-button")
+		button(class="std-button std-button_inactive-red", onclick="location.href='portfolio.html'") PORTFOLIO
+	div(class="navigation__std-button")
+		button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='contacts.html'") CONTACTS
+
+block left-arr
+	div(class="navigation__arr-button")
+		+arr-button("left","#4EB7A8", "white", "index.html")
+
+block content
+	div(class="about") Посмотрите это небольшое видео обо мне и моей деятельности:
+		iframe(class="video-frame", src="https://player.vimeo.com/video/62980495?color=e75735&portrait=0", allowfullscreen)
+
+block right-arr
+	div(class="navigation__arr-button")
+		+arr-button("right","#4EB7A8", "white", "portfolio.html")
+
+mixin arr-button(direction, arrcolor, color, href)
+	-var ppoints;
+	-(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
+		button(class="arr-button arr-button_color_"+color , onclick="location.href='"+href+"'")
+			svg(class="arr-button__arrow")
+				polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)

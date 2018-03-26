@@ -1,0 +1,32 @@
+doctype html
+html(class="main")
+	head
+		meta(charset = "utf-8")/
+		meta(name = "description", content = "Мой сайт из набора элементов")/
+		meta(name = "keywords", content = "верстка")/
+		meta(name = "author", content = "Sergey Karbyshev")/
+		meta(name = "viewport", content = "initial-scale=1.0, width=device-width")/
+		link(href="./vendors/jquery-ui-1.12.1.custom/jquery-ui-forFlatUI.css", rel="stylesheet")/
+		script(src="./vendors/jquery-ui-1.12.1.custom/external/jquery/jquery.js")
+		script(src="./vendors/jquery-ui-1.12.1.custom/jquery-ui.js")
+		title
+			block title
+	body(class="main__page")
+		include ../main-header/main-header.pug
+		nav(class="page__nav")
+			block navigation
+		article(class="page__article")
+			div(class="page__content-left-block")
+				block left-arr
+			div(class="page__content")
+				block content
+			div(class="page__content-right-block")
+				block right-arr
+		include ../main-footer/main-footer.pug
+
+mixin arr-button(direction, arrcolor, color, href)
+	-var ppoints;
+	-(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
+		button(class="arr-button arr-button_color_"+color , onclick="location.href="+href)
+			svg(class="arr-button__arrow")
+				polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)

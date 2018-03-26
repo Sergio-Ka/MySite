@@ -6,10 +6,10 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-    index: './source/pages/main.js',
-    about: './source/pages/about.js',
-    categories: './source/pages/categories.js',
-    contacts: './source/pages/contacts.js'
+    index: './source/pages/main/main.js',
+    about: './source/pages/about/about.js',
+    categories: './source/pages/portfolio/portfolio.js',
+    contacts: './source/pages/contacts/contacts.js'
     },
 
     output: {
@@ -19,10 +19,10 @@ module.exports = {
 
     plugins: [
         new ExtractTextPlugin('style.css'),
-        new HtmlWebpackPlugin({template: 'source/pages/main.pug', filename: '../index.html', chunks: ['index']}),
-        new HtmlWebpackPlugin({template: 'source/pages/about.pug', filename: '../about.html', chunks: ['about']}),
-        new HtmlWebpackPlugin({template: 'source/pages/categories.pug', filename: '../categories.html', chunks: ['categories']}),
-        new HtmlWebpackPlugin({template: 'source/pages/contacts.pug', filename: '../contacts.html', chunks: ['contacts']})
+        new HtmlWebpackPlugin({template: 'source/pages/main/main.pug', filename: '../index.html', chunks: ['index']}),
+        new HtmlWebpackPlugin({template: 'source/pages/about/about.pug', filename: '../about.html', chunks: ['about']}),
+        new HtmlWebpackPlugin({template: 'source/pages/portfolio/portfolio.pug', filename: '../portfolio.html', chunks: ['categories']}),
+        new HtmlWebpackPlugin({template: 'source/pages/contacts/contacts.pug', filename: '../contacts.html', chunks: ['contacts']})
     ],
 
     module: {

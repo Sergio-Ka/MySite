@@ -1,0 +1,84 @@
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Black.eot');
+	src: local('☺'), url('../fonts/Lato-Black.woff') format('woff'), url('../fonts/Lato-Black.ttf') format('truetype'), url('../fonts/Lato-Black.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato-light.eot');
+	src: local('☺'), url('../fonts/lato-light.woff') format('woff'), url('../fonts/lato-light.ttf') format('truetype'), url('../fonts/lato-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* pages*/
+@import 'main-header/main-header.styl'
+@import 'main-footer/main-footer.styl'
+
+@import 'main/main.styl'
+@import 'about/about.styl'
+@import 'portfolio/portfolio.styl'
+@import 'contacts/contacts.styl'
+
+/* blocks*/
+@import '../blocks/std-button/std-button.styl'
+@import '../blocks/search-form/search-form.styl'
+@import '../blocks/profile/profile.styl'
+@import '../blocks/map/map.styl'
+@import '../blocks/simple-form/simple-form.styl'
+@import '../blocks/chat/chat.styl'
+@import '../blocks/video-frame/video-frame.styl'
+@import '../blocks/arr-button/arr-button.styl'
+@import '../blocks/stage/stage.styl'
+@import '../blocks/slider2/slider2.styl'
+@import '../blocks/slider1/slider1.styl'
+@import '../blocks/toggle-switch/toggle-switch.styl'
+@import '../blocks/tick-box/tick-box.styl'
+@import '../blocks/pie-chart/pie-chart.styl'
+@import '../blocks/percentage/percentage.styl'
+@import '../blocks/datepicker/datepicker.styl'
+@import '../blocks/news/news.styl'
+@import '../blocks/events/events.styl'
+
+.main
+	font-size 18px
+	background #111111
+	font-family 'Lato', Sans-Serif
+	&__page
+		width 100%
+		margin 0
+		background #ffffff
+		color #4F4F4F
+
+.page__nav
+	width 100%
+	text-align center
+	background #111111
+	padding-bottom 20px
+
+.page__article
+	width 100%
+	background #FFFFFF
+
+.page__content
+	display inline-block
+	width 60%
+	padding-top 20px
+
+.page__content-left-block
+	display inline-block
+	width 20%
+
+.page__content-right-block
+	display inline-block
+	width 20%
+
+.navigation__std-button
+	margin 0 12px
+	display inline
+
+.navigation__arr-button
+	margin 0 50% 20px 50%
