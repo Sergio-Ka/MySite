@@ -1,9 +1,9 @@
 import '../blocks/map/images/icon-1.png';
 import '../blocks/map/images/icon-2.png';
-import '../blocks/profile/images/FB.png';
-import '../blocks/profile/images/FB_white.png';
-import '../blocks/profile/images/TW.png';
-import '../blocks/profile/images/TW_white.png';
-import '../blocks/profile/images/DR.png';
-import '../blocks/profile/images/DR_white.png';
+import '../blocks/profile/images/facebook.png';
+import '../blocks/profile/images/facebook-white.png';
+import '../blocks/profile/images/twitter.png';
+import '../blocks/profile/images/twitter-white.png';
+import '../blocks/profile/images/dribbble.png';
+import '../blocks/profile/images/dribbble-white.png';
 require('./main-header/main-header.js');

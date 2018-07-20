@@ -1,93 +1,93 @@
 extends ../template/template.pug
 
 block title
-	| My Syte - CATEGORIES
+    | My Syte - CATEGORIES
 
 block navigation
-	div(class="navigation__std-button")
-		button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='index.html'") MAIN
-	div(class="navigation__std-button")
-		button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='about.html'") ABOUT
-	div(class="navigation__std-button")
-		button(class="std-button std-button_inactive-green std-button_size_small", onclick="location.href='portfolio.html'") PORTFOLIO
-	div(class="navigation__std-button")
-		button(class="std-button std-button_color_red std-button_size_small", onclick="location.href='contacts.html'") CONTACTS
+    div(class="navigation__std-button")
+        button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='index.html'") MAIN
+    div(class="navigation__std-button")
+        button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='about.html'") ABOUT
+    div(class="navigation__std-button")
+        button(class="std-button std-button_inactive-green std-button_size_small", onclick="location.href='portfolio.html'") PORTFOLIO
+    div(class="navigation__std-button")
+        button(class="std-button std-button_color_red std-button_size_small", onclick="location.href='contacts.html'") CONTACTS
 
 block left-arr
-	div(class="navigation__arr-button")
-		+arr-button("left","#4EB7A8", "white", "about.html")
+    div(class="navigation__arr-button")
+        +arr-button("left","#4EB7A8", "white", "about.html")
 
 block content
-	| Здесь представлены примеры моей работы, в частности верстка элементов пользовательского интерфейса.
-	div(class="portfolio__stage")
-		svg(class="stage")
-			- var cor_y = 14, cor_t_y = cor_y + 5;
-			line(class="stage__line", x1="1.3468%", y1=cor_y, x2="98.653%", y2=cor_y)
-			line(class="stage__line stage__line_color_red", x1="1.3468%", y1=cor_y, x2="50%", y2=cor_y)
-			circle(class="stage__circle_color_red", r="3.35%", cx="2.3569%", cy=cor_y)
-			text(class="stage__text stage__text_color_white", x="1.5151%", y=cor_t_y) 1
-			circle(class="stage__circle_color_red", r="3.35%", cx="25%", cy=cor_y)
-			text(class="stage__text stage__text_color_white", x="24.16%", y=cor_t_y) 2
-			circle(class="stage__circle_color_red", r="3.35%", cx="50%", cy=cor_y)
-			text(class="stage__text stage__text_color_white", x="49.16%", y=cor_t_y) 3
-			circle(class="stage__circle_color_grey", r="3.35%", cx="75%", cy=cor_y)
-			text(class="stage__text stage__text_color_darkgrey", x="74.16%", y=cor_t_y) 4
-			circle(class="stage__circle_color_grey", r="3.35%", cx="97.643%", cy=cor_y)
-			text(class="stage__text stage__text_color_darkgrey", x="96.8%", y=cor_t_y) 5
+    | Здесь представлены примеры моей работы, в частности верстка элементов пользовательского интерфейса.
+    div(class="portfolio__stage")
+        svg(class="stage")
+            - var cor_y = 14, cor_t_y = cor_y + 5;
+            line(class="stage__line", x1="1.3468%", y1=cor_y, x2="98.653%", y2=cor_y)
+            line(class="stage__line stage__line_color_red", x1="1.3468%", y1=cor_y, x2="50%", y2=cor_y)
+            circle(class="stage__circle_color_red", r="3.35%", cx="2.3569%", cy=cor_y)
+            text(class="stage__text stage__text_color_white", x="1.5151%", y=cor_t_y) 1
+            circle(class="stage__circle_color_red", r="3.35%", cx="25%", cy=cor_y)
+            text(class="stage__text stage__text_color_white", x="24.16%", y=cor_t_y) 2
+            circle(class="stage__circle_color_red", r="3.35%", cx="50%", cy=cor_y)
+            text(class="stage__text stage__text_color_white", x="49.16%", y=cor_t_y) 3
+            circle(class="stage__circle_color_grey", r="3.35%", cx="75%", cy=cor_y)
+            text(class="stage__text stage__text_color_darkgrey", x="74.16%", y=cor_t_y) 4
+            circle(class="stage__circle_color_grey", r="3.35%", cx="97.643%", cy=cor_y)
+            text(class="stage__text stage__text_color_darkgrey", x="96.8%", y=cor_t_y) 5
 
-	div(class="portfolio__slider2")
-		div(id="slider2")
-		div(class="slider2__scale")
-			div(class="slider2__digit digit-1") 0
-			div(class="slider2__digit digit-2") 25
-			div(class="slider2__digit digit-3") 50
-			div(class="slider2__digit digit-4") 75
-			div(class="slider2__digit digit-5") 100
-	
-	div(class="portfolio__slider1")
-		div(id="slider1")
+    div(class="portfolio__slider2")
+        div(class="slider-2 js-slider-2")
+        div(class="slider2__scale")
+            div(class="slider2__digit-1") 0
+            div(class="slider2__digit-2") 25
+            div(class="slider2__digit-3") 50
+            div(class="slider2__digit-4") 75
+            div(class="slider2__digit-5") 100
+    
+    div(class="portfolio__slider1")
+        div(class="slider-1 js-slider-1")
 
-	div(class="portfolio__toggle-tick")
-		div(class="portfolio__positioner")
-			svg(class="pie-chart")
-				circle(class="pie-chart__circle pie-chart__circle_color_grey", r="39", cx="50%", cy="50%")
-				circle(class="pie-chart__circle pie-chart__circle_color_red", r="39", cx="50%", cy="50%", stroke-dashoffset="112", stroke-dasharray="28 267")
-				circle(class="pie-chart__circle pie-chart__circle_color_green", r="39", cx="50%", cy="50%", stroke-dashoffset="85", stroke-dasharray="118 177")
-				circle(class="pie-chart__circle pie-chart__circle_color_light-grey", r="39", cx="50%", cy="50%", stroke-dashoffset="-30", stroke-dasharray="73 222")
-		div(class="portfolio__positioner")
-			label(class="switch")
-				input(class="switch__input", type="checkbox", checked)/
-				span(class="switch__text", data-yes="ON", data-no="OFF")
-				span(class="switch__slider")
-		div(class="portfolio__positioner")
-			input(class="tick-box-input", type="checkbox", id="c1", checked)/
-			label(for="c1")
-				span(class="tick-box-circle-arrow")
-	
-	div(class="portfolio__percentage")
-		-var i;
-		-for(i=0;i<100;i++) {
-			+percentage(i)
-		-}
+    div(class="portfolio__toggle-tick")
+        div(class="portfolio__positioner")
+            svg(class="pie-chart")
+                circle(class="pie-chart__circle pie-chart__circle_color_grey", r="39", cx="50%", cy="50%")
+                circle(class="pie-chart__circle pie-chart__circle_color_red", r="39", cx="50%", cy="50%", stroke-dashoffset="112", stroke-dasharray="28 267")
+                circle(class="pie-chart__circle pie-chart__circle_color_green", r="39", cx="50%", cy="50%", stroke-dashoffset="85", stroke-dasharray="118 177")
+                circle(class="pie-chart__circle pie-chart__circle_color_light-grey", r="39", cx="50%", cy="50%", stroke-dashoffset="-30", stroke-dasharray="73 222")
+        div(class="portfolio__positioner")
+            label(class="switch")
+                input(class="switch__input", type="checkbox", checked)/
+                span(class="switch__text", data-yes="ON", data-no="OFF")
+                span(class="switch__slider")
+        div(class="portfolio__positioner")
+            input(class="tick-box-input", type="checkbox", id="c1", checked)/
+            label(for="c1")
+                span(class="tick-box-circle-arrow")
+    
+    div(class="portfolio__percentage")
+        -var i;
+        -for(i=0;i<100;i++) {
+            +percentage(i)
+        -}
 
 
 block right-arr
-	div(class="navigation__arr-button")
-		+arr-button("right","#4EB7A8", "white", "contacts.html")
+    div(class="navigation__arr-button")
+        +arr-button("right","#4EB7A8", "white", "contacts.html")
 
 mixin arr-button(direction, arrcolor, color, href)
-	-var ppoints;
-	-(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
-		button(class="arr-button arr-button_color_"+color , onclick="location.href='"+href+"'")
-			svg(class="arr-button__arrow")
-				polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+    -var ppoints;
+    -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
+        button(class="arr-button arr-button_color_"+color , onclick="location.href='"+href+"'")
+            svg(class="arr-button__arrow")
+                polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
 
 mixin percentage(percent)
-	-var dasharray, a, b, xcoordtext;
-	-a = percent*295/100;
-	-b = 295 - a;
-	-dasharray = a+" "+b;
-	-(percent<10 && percent>=0)?xcoordtext = "38%":xcoordtext = "25%";
-		svg(class="percentage")
-			circle(class="percentage__circle", r="45", cx="50%", cy="50%", stroke-dasharray= dasharray)
-			text(class="percentage__text", x= xcoordtext, y="66%")= percent
+    -var dasharray, a, b, xcoordtext;
+    -a = percent*295/100;
+    -b = 295 - a;
+    -dasharray = a+" "+b;
+    -(percent<10 && percent>=0)?xcoordtext = "38%":xcoordtext = "25%";
+        svg(class="percentage")
+            circle(class="percentage__circle", r="45", cx="50%", cy="50%", stroke-dasharray= dasharray)
+            text(class="percentage__text", x= xcoordtext, y="66%")= percent

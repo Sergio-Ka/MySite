@@ -1,1 +1,2 @@
-$("#selectmenu").selectmenu();
+$selectmenu = $(".js-selectmenu");
+$selectmenu.selectmenu();

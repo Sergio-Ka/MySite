@@ -1,29 +1,33 @@
 .news
-	background url(../blocks/news/images/news-photo.png) -53px 0 no-repeat
-	min-height 212px
-	border-radius 3px
-	color #FFFFFF
-	&__content-block
-		width 153px
-		min-height 192px
-		padding 20px 17px 0 23px
-		float right
-		border-top-right-radius 3px
-		border-bottom-right-radius 3px
-		font-weight normal
-		font-size 0.63rem
-		margin 0
-		letter-spacing 0.02rem
-		line-height 0.75rem
-		&_color_red
-			background #E75735
-	&__header
-		font-weight normal
-		font-size 1.53rem
-		line-height 1.45rem
-		margin 0
-	&__date
-		font-weight bold
-		font-size 0.6rem
-		margin 12px 0 11px
-		letter-spacing 0.06rem
+  min-height 212px
+  border-radius 3px
+  color #FFFFFF
+  display flex
+  &_color_red
+      background #E75735
+  &__content-block-left
+    background url(../blocks/news/images/news-photo.png) -53px 0 no-repeat
+    //background-size cover
+    width 38.306%
+    border-top-left-radius 3px
+    border-bottom-left-radius 3px
+  &__content-block-right
+    width 61.694%
+    padding 20px 17px 0 23px
+    border-top-right-radius 3px
+    border-bottom-right-radius 3px
+    font-weight normal
+    font-size 0.63rem
+    letter-spacing 0.02rem
+    line-height 0.75rem
+  &__header
+    font-weight normal
+    font-size 1.53rem
+    line-height 1.45rem
+    margin 0
+  &__date
+    font-weight bold
+    font-size 0.6rem
+    margin 12px 0 11px
+    letter-spacing 0.06rem
+    text-transform uppercase
