@@ -5,13 +5,17 @@ block title
 
 block navigation
     div(class="navigation__std-button")
-        button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='index.html'") MAIN
+        a(class="navigation__link", href="index.html")
+            button(class="std-button std-button_color_red std-button_ripple-eff") MAIN
     div(class="navigation__std-button")
-        button(class="std-button std-button_color_red std-button_ripple-eff", onclick="location.href='about.html'") ABOUT
+        a(class="navigation__link", href="about.html")
+            button(class="std-button std-button_color_red std-button_ripple-eff") ABOUT
     div(class="navigation__std-button")
-        button(class="std-button std-button_inactive-green std-button_size_small", onclick="location.href='portfolio.html'") PORTFOLIO
+        a(class="navigation__link", href="portfolio.html")
+            button(class="std-button std-button_inactive-green std-button_size_small") PORTFOLIO
     div(class="navigation__std-button")
-        button(class="std-button std-button_color_red std-button_size_small", onclick="location.href='contacts.html'") CONTACTS
+        a(class="navigation__link", href="contacts.html")
+            button(class="std-button std-button_color_red std-button_size_small") CONTACTS
 
 block left-arr
     div(class="navigation__arr-button")
@@ -78,9 +82,10 @@ block right-arr
 mixin arr-button(direction, arrcolor, color, href)
     -var ppoints;
     -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
-        button(class="arr-button arr-button_color_"+color , onclick="location.href='"+href+"'")
-            svg(class="arr-button__arrow")
-                polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+        a(class="navigation__link", href= href)
+            button(class="arr-button arr-button_color_"+color)
+                svg(class="arr-button__arrow")
+                    polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
 
 mixin percentage(percent)
     -var dasharray, a, b, xcoordtext;
