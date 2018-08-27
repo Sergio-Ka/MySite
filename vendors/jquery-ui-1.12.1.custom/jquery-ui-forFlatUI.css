@@ -161,13 +161,6 @@
   vertical-align: middle;
 }
 
-@media only screen and (max-width: 604px) {
-  .ui-button {
-    margin-left: 10px;
-    width: 95.4%;
-  }
-}
-
 @media only screen and (max-width: 410px) {
   .ui-button {
     width: 90%;

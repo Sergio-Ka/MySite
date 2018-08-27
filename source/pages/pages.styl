@@ -18,8 +18,13 @@
   font-size 18px
   background #111111
   font-family 'Lato', Sans-Serif
+  height 100%
   &__page
+    display flex
+    flex-direction column
+    height 100%
     width 100%
+    min-width 300px
     margin 0
     background #ffffff
     color #4F4F4F
@@ -31,25 +36,38 @@
   padding-bottom 20px
 
 .page__article
+  display flex
+  align-items flex-end
+  flex-wrap wrap
+  flex 1 0 auto
   width 100%
   background #FFFFFF
 
 .page__content
-  display inline-block
   width 60%
   padding-top 20px
+  align-self flex-start
 
 .page__content-left-block
-  display inline-block
   width 20%
 
 .page__content-right-block
-  display inline-block
   width 20%
 
+@media only screen and (max-width 600px)
+  .page__content
+    width 100%
+    &-left-block
+      display none
+    &-right-block
+      display none
+
+  .news-events__news
+    min-width 275px
+
 .navigation__std-button
-  margin 0 12px
-  display inline
+  margin 12px
+  display inline-block
 
 .navigation__arr-button
   margin 0 50% 20px 50%
