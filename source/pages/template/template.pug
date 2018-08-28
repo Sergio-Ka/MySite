@@ -8,8 +8,6 @@ html(class="main")
         meta(name = "viewport", content = "initial-scale=1.0, width=device-width")/
         link(href="./vendors/jquery-ui-1.12.1.custom/jquery-ui-forFlatUI.css", rel="stylesheet")/
         link(rel = "shortcut icon", href = require('../../images/favicon.ico'), type = "image/x-icon")/
-        script(src="./vendors/jquery-ui-1.12.1.custom/external/jquery/jquery.js")
-        script(src="./vendors/jquery-ui-1.12.1.custom/jquery-ui.js")
         title
             block title
     body(class="main__page")
@@ -24,6 +22,8 @@ html(class="main")
             div(class="page__content-right-block")
                 block right-arr
         include ../main-footer/main-footer.pug
+        script(src="./vendors/jquery-ui-1.12.1.custom/external/jquery/jquery.js")
+        script(src="./vendors/jquery-ui-1.12.1.custom/jquery-ui.js")
 
 mixin arr-button(direction, arrcolor, color, href)
     -var ppoints;

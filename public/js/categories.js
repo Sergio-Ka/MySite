@@ -112,12 +112,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pages_styl__);
 
 __webpack_require__(1);
+__webpack_require__(9);
 __webpack_require__(10);
-__webpack_require__(11);
 
 /***/ }),
-/* 9 */,
-/* 10 */
+/* 9 */
 /***/ (function(module, exports) {
 
 var $slider1 = $('.js-slider-1');
@@ -136,7 +135,7 @@ $slider1.slider({
 });
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports) {
 
 var $slider2 = $(".js-slider-2");
