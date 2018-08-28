@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -75,115 +75,34 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__blocks_map_images_icon_1_png__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__blocks_map_images_icon_1_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__blocks_map_images_icon_1_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__blocks_map_images_icon_2_png__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__blocks_map_images_icon_2_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__blocks_map_images_icon_2_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__blocks_profile_images_facebook_png__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__blocks_profile_images_facebook_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__blocks_profile_images_facebook_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__blocks_profile_images_facebook_white_png__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__blocks_profile_images_facebook_white_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__blocks_profile_images_facebook_white_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__blocks_profile_images_twitter_png__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__blocks_profile_images_twitter_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__blocks_profile_images_twitter_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__blocks_profile_images_twitter_white_png__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__blocks_profile_images_twitter_white_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__blocks_profile_images_twitter_white_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_favicon_ico__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_favicon_ico___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__images_favicon_ico__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__blocks_selectmenu_images_arrow_down_png__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__blocks_selectmenu_images_arrow_down_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__blocks_selectmenu_images_arrow_down_png__);
 
-
-
-
-
-
-
-
-
-
-__webpack_require__(12);
+__webpack_require__(3);
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "images/icon-1.png";
+module.exports = __webpack_require__.p + "images/arrow-down.png";
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "images/icon-2.png";
+__webpack_require__(4);
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/facebook.png";
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/facebook-white.png";
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/twitter.png";
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/twitter-white.png";
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/dribbble.png";
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/dribbble-white.png";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/arrow-down.png";
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/favicon.ico";
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(13);
-
-/***/ }),
-/* 13 */
 /***/ (function(module, exports) {
 
 $selectmenu = $(".js-selectmenu");
 $selectmenu.selectmenu();
 
 /***/ }),
-/* 14 */,
-/* 15 */,
-/* 16 */
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
