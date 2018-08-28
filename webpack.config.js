@@ -14,15 +14,15 @@ module.exports = {
 
   output: {
     path: __dirname + '/public',
-    filename: '[name].js'
+    filename: './js/[name].js'
   },
 
   plugins: [
     new ExtractTextPlugin('style.css'),
-    new HtmlWebpackPlugin({template: 'source/pages/main/main.pug', filename: '../index.html', chunks: ['index']}),
-    new HtmlWebpackPlugin({template: 'source/pages/about/about.pug', filename: '../about.html', chunks: ['about']}),
-    new HtmlWebpackPlugin({template: 'source/pages/portfolio/portfolio.pug', filename: '../portfolio.html', chunks: ['categories']}),
-    new HtmlWebpackPlugin({template: 'source/pages/contacts/contacts.pug', filename: '../contacts.html', chunks: ['contacts']})
+    new HtmlWebpackPlugin({template: 'source/pages/main/main.pug', filename: '../public/index.html', chunks: ['index']}),
+    new HtmlWebpackPlugin({template: 'source/pages/about/about.pug', filename: '../public/about.html', chunks: ['about']}),
+    new HtmlWebpackPlugin({template: 'source/pages/portfolio/portfolio.pug', filename: '../public/portfolio.html', chunks: ['categories']}),
+    new HtmlWebpackPlugin({template: 'source/pages/contacts/contacts.pug', filename: '../public/contacts.html', chunks: ['contacts']})
   ],
 
   module: {
@@ -42,7 +42,7 @@ module.exports = {
       loader: 'file-loader?name=fonts/[name].[ext]'
     },
     {
-      test: /\.png$/,
+      test: /\.(png|ico)$/,
       loader: 'file-loader?name=images/[name].[ext]'
     }
     ]

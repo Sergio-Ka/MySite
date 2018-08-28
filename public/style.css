@@ -14,8 +14,9 @@
 }
 .main {
   font-size: 18px;
+  font-family: 'Lato', Arial, Sans-Serif;
+  color: #fff;
   background: #111;
-  font-family: 'Lato', Sans-Serif;
   height: 100%;
 }
 .main__page {
@@ -76,6 +77,7 @@
 }
 /* pages*/
 .page__header {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -94,13 +96,11 @@
 }
 .header__search {
   padding-top: 20px;
-  height: 28px;
   width: 100%;
 }
 .header__positioner-1 {
   order: 1;
   width: 266px;
-  height: 93px;
 }
 .header__right-block {
   order: 3;
@@ -122,8 +122,8 @@
   font-weight: bold;
   border-top: 2px solid #111;
   width: 100%;
-  height: 70px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .main__calendar {
   display: inline-block;
@@ -150,23 +150,19 @@
   margin: 20px auto;
 }
 .portfolio__stage {
-  margin: 25px 0 0 0;
-  height: 80px;
+  margin: 25px 0 80px 0;
   width: 60%;
 }
 .portfolio__slider-2 {
-  margin: 25px 0 0 0;
-  height: 80px;
+  margin: 25px 0 80px 0;
   width: 60%;
 }
 .portfolio__slider-1 {
-  margin: 25px 0 0 0;
-  height: 80px;
+  margin: 25px 0 40px 0;
   width: 60%;
 }
 .toggle-tick {
-  margin: 25px 0 0 0;
-  height: 80px;
+  margin: 25px 0 80px 0;
   width: 60%;
 }
 .portfolio__positioner {

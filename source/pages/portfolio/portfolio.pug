@@ -6,16 +6,16 @@ block title
 block navigation
     div(class="navigation__std-button")
         a(class="navigation__link", href="index.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") MAIN
+            button(class="std-button std-button_color_red std-button_ripple-eff") main
     div(class="navigation__std-button")
         a(class="navigation__link", href="about.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") ABOUT
+            button(class="std-button std-button_color_red std-button_ripple-eff") about
     div(class="navigation__std-button")
         a(class="navigation__link", href="portfolio.html")
-            button(class="std-button std-button_inactive-green std-button_size_small") PORTFOLIO
+            button(class="std-button std-button_inactive-green std-button_size_small") portfolio
     div(class="navigation__std-button")
         a(class="navigation__link", href="contacts.html")
-            button(class="std-button std-button_color_red std-button_size_small") CONTACTS
+            button(class="std-button std-button_color_red std-button_size_small") contacts
 
 block left-arr
     div(class="navigation__arr-button")
@@ -85,7 +85,7 @@ mixin arr-button(direction, arrcolor, color, href)
         a(class="navigation__link", href= href)
             button(class="arr-button arr-button_color_"+color)
                 svg(class="arr-button__arrow")
-                    polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+                    polyline(class="button-arrow", points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
 
 mixin percentage(percent)
     -var dasharray, a, b, xcoordtext;

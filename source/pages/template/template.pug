@@ -7,6 +7,7 @@ html(class="main")
         meta(name = "author", content = "Sergey Karbyshev")/
         meta(name = "viewport", content = "initial-scale=1.0, width=device-width")/
         link(href="./vendors/jquery-ui-1.12.1.custom/jquery-ui-forFlatUI.css", rel="stylesheet")/
+        link(rel = "shortcut icon", href = "./images/favicon.ico", type = "image/x-icon")/
         script(src="./vendors/jquery-ui-1.12.1.custom/external/jquery/jquery.js")
         script(src="./vendors/jquery-ui-1.12.1.custom/jquery-ui.js")
         title
@@ -29,4 +30,4 @@ mixin arr-button(direction, arrcolor, color, href)
     -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
         button(class="arr-button arr-button_color_"+color , onclick="location.href="+href)
             svg(class="arr-button__arrow")
-                polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+                polyline(class="button-arrow", points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)

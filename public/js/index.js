@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -91,6 +91,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_favicon_ico__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_favicon_ico___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__images_favicon_ico__);
 
 
 
@@ -99,7 +103,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__webpack_require__(10);
+
+
+__webpack_require__(12);
 
 /***/ }),
 /* 2 */
@@ -153,20 +159,29 @@ module.exports = __webpack_require__.p + "images/dribbble-white.png";
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(11);
+module.exports = __webpack_require__.p + "images/arrow-down.png";
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/favicon.ico";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(13);
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 $selectmenu = $(".js-selectmenu");
 $selectmenu.selectmenu();
 
 /***/ }),
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -175,54 +190,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pages_styl__);
 
 __webpack_require__(1);
-__webpack_require__(16);
-__webpack_require__(17);
+__webpack_require__(15);
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
-var $slider1 = $('.js-slider-1');
-$slider1.slider({
-    min: 0,
-    max: 100,
-    value: 40,
-    create: function (event, ui) {
-        var $sliderhandle = $('.ui-slider-handle');
-        $sliderhandle.append('<input class="slider-value js-slider-value" value="40"/><div class="slider-value__tail"></div>');
-    },
-    slide: function (event, ui) {
-        var $slidervalue = $(".js-slider-value");
-        $slidervalue.val(ui.value);
-    }
-});
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-var $slider2 = $(".js-slider-2");
-var $slider2handle = $('.js-slider-2 .ui-slider-handle, .js-slider-1 .ui-slider-handle');
-var $slider2range = $('.js-slider-2 .ui-slider-range-min, .js-slider-1 .ui-slider-range-min');
-
-$slider2.slider({
-    min: 0,
-    max: 100,
-    value: 75,
-    range: 'min'
-});
-
-$slider2handle.each(function (index, handle) {
-    if (index % 2 == 0)
-    $(handle).addClass('even-handle');
-    else $(handle).addClass('odd-handle');
-});
-
-$slider2range.each(function (index, handle) {
-    if (index % 2 == 0)
-    $(handle).addClass('even-range-min');
-    else $(handle).addClass('odd-range-min');
-});
+var $calendar = $( ".js-datepicker" );
+$calendar.datepicker({inline: true, prevText: "<", nextText: ">", currentText: "TODAY", dayNamesMin: [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ], dateFormat: "dd/mm/yy", firstDay: 1, altField: ".datepicker__digit", altFormat: "dd", showButtonPanel: true});
 
 /***/ })
 /******/ ]);

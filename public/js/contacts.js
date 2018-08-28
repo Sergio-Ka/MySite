@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -91,6 +91,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__blocks_profile_images_dribbble_png__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__blocks_profile_images_dribbble_white_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__blocks_selectmenu_images_arrow_down_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_favicon_ico__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__images_favicon_ico___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__images_favicon_ico__);
 
 
 
@@ -99,7 +103,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__webpack_require__(10);
+
+
+__webpack_require__(12);
 
 /***/ }),
 /* 2 */
@@ -153,23 +159,35 @@ module.exports = __webpack_require__.p + "images/dribbble-white.png";
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(11);
+module.exports = __webpack_require__.p + "images/arrow-down.png";
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/favicon.ico";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(13);
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 $selectmenu = $(".js-selectmenu");
 $selectmenu.selectmenu();
 
 /***/ }),
-/* 12 */,
-/* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
-/* 18 */
+/* 18 */,
+/* 19 */,
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

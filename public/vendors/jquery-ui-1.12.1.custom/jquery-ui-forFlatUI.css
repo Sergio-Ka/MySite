@@ -14,7 +14,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  cursor: default;
+  cursor: pointer;
   -ms-touch-action: none;
   touch-action: none;
   background: #4EB7A8;
@@ -106,7 +106,7 @@
   content: "";
   width: 11.5%;
   height: 100%;
-  background: #4EB7A8 url(../../source/blocks/selectmenu/images/arrow-down.png) 8px 10px no-repeat;
+  background: #4EB7A8 url(../../images/arrow-down.png) 8px 10px no-repeat;
   color: #FFFFFF;
   position: absolute;
   top: 0px;
@@ -165,6 +165,10 @@
   .ui-button {
     width: 90%;
   }
+}
+
+.ui-icon {
+  cursor: pointer;
 }
 
 .ui-menu {
