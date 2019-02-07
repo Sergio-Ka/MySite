@@ -1,0 +1,9 @@
+mixin search-form(options = {placeholder:"Search", errorStatus:false})
+    -let {placeholder = "Search", errorStatus = false} = options;
+    form.search
+        -if (errorStatus) {
+            input.search__input.search__input_color_red(type = "search", placeholder= placeholder, name = "keywords")
+        -} else {
+            input.search__input(type = "search", placeholder= placeholder, name = "keywords")
+        -}
+        input.search__button(type = "submit", value = "")/

@@ -1,0 +1,8 @@
+mixin news(options = {image:"images/news-photo.png", header: "It's all going downhill", date: "24 august 2013", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
+    -let {image = "images/news-photo.png", header = "It's all going downhill", date = "24 august 2013", text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."} = options;
+    .news
+        .news__image(style=`background-image: url(${image});`)
+        .news__content
+            h3.news__header= header
+            .news__date= date
+            p.news__text= text

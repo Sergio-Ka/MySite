@@ -1,15 +1,30 @@
-.datepicker__digit
-  font-family 'Lato', Sans-Serif
-  max-width 187px
-  background #E75735
-  color #FFFFFF
-  font-size 4.5rem
-  font-weight normal
-  padding 0.35rem 0 0.25rem 33.1%
-  border none
-  border-top-right-radius 3px
-  border-top-left-radius 3px
+.datepicker
+  
+  &__digit
+    box-sizing border-box
+    width 100%
+    background #E75735
+    color #FFFFFF
+    font-family 'Lato', Sans-Serif
+    font-size 4.5rem
+    font-weight normal
+    padding 0.35rem 0 0.25rem 33.1%
+    border none
+    border-top-right-radius 0.167rem
+    border-top-left-radius 0.167rem
 
-@media only screen and (max-width 604px)
-  .datepicker__digit
-    max-width 185px
+  @media only screen and (max-width 33.556rem)
+    max-width 15rem
+
+  &__button
+    cursor pointer
+    width 100%
+    height 2.35rem
+    border-bottom-right-radius 0.167rem
+    border-bottom-left-radius 0.167rem
+    background #E5E5E5
+    color #868686
+    font-size 0.8rem
+    font-weight bold
+    padding 0.5rem 0 0 1.111rem
+    box-sizing border-box

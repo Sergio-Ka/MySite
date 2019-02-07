@@ -1,2 +1,1 @@
-import '../pages.styl';
-require('../pages.js');
+require('../template/template.js');

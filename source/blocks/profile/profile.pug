@@ -1,0 +1,17 @@
+mixin profile(options = {photo: "images/photo-john-smith.png", photoPosition:"-1.444rem 0", name: "John Smith", profession: "ux designer", theme: "light", iconsTheme: "dark"})
+    -let {photo = "images/photo-john-smith.png", photoPosition = "-1.444rem 0", name = "John Smith", profession = "ux designer", theme = "light", iconsTheme = "dark"} = options;
+    .profile
+        .profile__photo(style = `background-image: url(${photo}); background-position: ${photoPosition};`)
+        .profile__content(class = `profile__content_theme_${theme}`)
+            .profile__name(class = `profile__name_theme_${theme}`)= name
+            .profile__profession(class = `profile__post_theme_${theme}`)= profession
+            .profile__icons
+                -if (iconsTheme == "light") {
+                    img.profile__icon(src=require('../../blocks/profile/images/facebook-white.png'), alt="FaceBook")
+                    img.profile__icon(src=require('../../blocks/profile/images/twitter-white.png'), alt="Twitter")
+                    img.profile__icon(src=require('../../blocks/profile/images/dribbble-white.png'), alt="Dribbble")
+                -} else {
+                    img.profile__icon(src=require('../../blocks/profile/images/facebook.png'), alt="FaceBook")
+                    img.profile__icon(src=require('../../blocks/profile/images/twitter.png'), alt="Twitter")
+                    img.profile__icon(src=require('../../blocks/profile/images/dribbble.png'), alt="Dribbble")
+                -}

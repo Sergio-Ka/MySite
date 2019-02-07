@@ -1,61 +1,39 @@
 extends ../template/template.pug
 
+include ../../blocks/news/news.pug
+include ../../blocks/events/events.pug
+include ../../blocks/datepicker/datepicker.pug
+
 block title
     | My Syte - MAIN
 
-block navigation
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="index.html")
-            button(class="std-button std-button_color_green std-button_ripple-eff") main
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="about.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") about
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="portfolio.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") portfolio
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="contacts.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") contacts
-
 block left-arr
-    div(class="navigation__arr-button")
-        +arr-button("left","#FFFFFF", "gray", "index.html")
+    .navigation__arr-button
+        a.navigation__link(href= "index.html")
+            +arrow-button({direction:"left", arrowColor:"#FFFFFF", buttonColor:"gray"})
 
 block content
-    h2(class="main__text") На этой странице можете запланировать встречу со мной на определенное число, а так же посмотреть анонсы предстоящих событий и последние новости.
-    div(class="main__calendar") Планировщик событий
-        form(class="calendar__form")
-            input(class="datepicker__digit", disabled)
-            div(class="datepicker js-datepicker")
-
-    div(class="main__events") Блок предстоящих событий
-        div(class="events events_color_green")
-            div(class="events__content-block-left")
-            form(class="events__content-block-right")
-                h2(class="events__date-1") 24
-                h2(class="events__date-2") Aug
-                h2(class="events__title") this is the title
-                p(class="events__text") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                div(class="events__button")
-                    button(class="std-button std-button_color_green std-button_theme_events") add to calendar
-
-    div(class="main__news") Блок новостей
-        div(class="news news_color_red")
-            div(class="news__content-block-left")
-            div(class="news__content-block-right")
-                h2(class="news__header") It's all going downhill
-                h2(class="news__date") 24 august 2013
-                p(class="news__text") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
-
+    .main-page
+        .main-page__text На этой странице можете запланировать встречу со мной на определенное число, а так же посмотреть анонсы предстоящих событий и последние новости.   
+        .main-page__news Новости
+            +news({image:"images/news-photo.png", header: "It's all going downhill", date: "24 august 2013",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
+        .main-page__calendar Планировщик событий
+            +datepicker({prevText: "<",
+                        nextText: ">",
+                        currentText: "TODAY",
+                        dayNamesMin: [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ],
+                        dateFormat: "dd/mm/yy",
+                        firstDay: 1,
+                        altField: ".datepicker__digit",
+                        altFormat: "dd",
+                        showButtonPanel: "false"})
+        .main-page__events Предстоящие события
+            +events({image:"images/events-photo.png", day: "24", month: "Aug", title: "this is the title",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    buttonSettings: {text:"add to calendar", color:"green", size:"small", effect:"", activeStatus:"inactive"}})
 
 block right-arr
-    div(class="navigation__arr-button")
-        +arr-button("right","#FFFFFF", "green", "about.html")
-
-mixin arr-button(direction, arrcolor, color, href)
-    -var ppoints;
-    -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
-        a(class="navigation__link", href= href)
-            button(class="arr-button arr-button_color_"+color)
-                svg(class="arr-button__arrow")
-                    polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+    .navigation__arr-button
+        a.navigation__link(href= "about.html")
+            +arrow-button({direction:"right", arrowColor:"#FFFFFF", buttonColor:"green"})

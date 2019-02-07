@@ -1,33 +1,33 @@
+include ../../blocks/arrow-button/arrow-button.pug
+include ../../blocks/standard-button/standard-button.pug
+include ../navigation/navigation.pug
+
 doctype html
-html(class="main")
+html
     head
         meta(charset = "utf-8")/
         meta(name = "description", content = "Мой сайт из набора элементов")/
         meta(name = "keywords", content = "верстка")/
         meta(name = "author", content = "Sergey Karbyshev")/
         meta(name = "viewport", content = "initial-scale=1.0, width=device-width")/
-        link(href="./vendors/jquery-ui-1.12.1.custom/jquery-ui-forFlatUI.css", rel="stylesheet")/
         link(rel = "shortcut icon", href = require('../../images/favicon.ico'), type = "image/x-icon")/
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscn18ZPcC-ildPKU4IQeE7PClEFQ8AAQ")
         title
             block title
-    body(class="main__page")
-        include ../main-header/main-header.pug
-        nav(class="page__nav")
-            block navigation
-        article(class="page__article")
-            div(class="page__content-left-block")
-                block left-arr
-            div(class="page__content")
-                block content
-            div(class="page__content-right-block")
-                block right-arr
-        include ../main-footer/main-footer.pug
-        script(src="./vendors/jquery-ui-1.12.1.custom/external/jquery/jquery.js")
-        script(src="./vendors/jquery-ui-1.12.1.custom/jquery-ui.js")
-
-mixin arr-button(direction, arrcolor, color, href)
-    -var ppoints;
-    -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
-        button(class="arr-button arr-button_color_"+color , onclick="location.href="+href)
-            svg(class="arr-button__arrow")
-                polyline(class="button-arrow", points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+    body
+        main.wrap
+            include ../main-header/main-header.pug
+            nav.wrap__navigation
+                +navigation([{link: "index.html", buttonSettings: {text:"main", color:"green", size:"", effect:"ripple", activeStatus:""}},
+                            {link: "about.html", buttonSettings: {text:"about", color:"red", size:"small", effect:"ripple", activeStatus:""}},
+                            {link: "portfolio.html", buttonSettings: {text:"portfolio", color:"red", size:"small", effect:"", activeStatus:"inactive"}},
+                            {link: "contacts.html", buttonSettings: {text:"contacts", color:"green", size:"", effect:"", activeStatus:"inactive"}}
+                            ])
+            article.wrap__article
+                .wrap__content-left-block
+                    block left-arr
+                .wrap__content
+                    block content
+                .wrap__content-right-block
+                    block right-arr
+            include ../main-footer/main-footer.pug

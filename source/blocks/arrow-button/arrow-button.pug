@@ -1,0 +1,6 @@
+mixin arrow-button(options = {direction:"left", arrowColor:"#4EB7A8", buttonColor:"white"})
+    -let {direction="left", arrowColor="#4EB7A8", buttonColor="white"} = options;
+    -let polylinePoints = (direction === "left") ? "18,11 8,21 18,31" : "10,11 20,21 10,31";
+    button.arrow-button(class=`arrow-button_color_${buttonColor}`)
+        svg.arrow-button__arrow
+            polyline(points= polylinePoints, fill="none", stroke-width="4", stroke= arrowColor)

@@ -1,69 +1,32 @@
 extends ../template/template.pug
 
+include ../../blocks/map/map.pug
+include ../../blocks/simple-form/simple-form.pug
+include ../../blocks/chat/chat.pug
+
 block title
     | My Syte - CONTACTS
 
-block navigation
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="index.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") main
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="about.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") about
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="portfolio.html")
-            button(class="std-button std-button_color_red std-button_ripple-eff") portfolio
-    div(class="navigation__std-button")
-        a(class="navigation__link", href="contacts.html")
-            button(class="std-button std-button_color_green std-button_ripple-eff") contacts
-
 block left-arr
-    div(class="navigation__arr-button")
-        +arr-button("left","#FFFFFF", "green", "portfolio.html")
+    .navigation__arr-button
+        a.navigation__link(href= "portfolio.html")
+            +arrow-button({direction:"left", arrowColor:"#FFFFFF", buttonColor:"green"})
 
 block content
-    div(class="contacts-map") Как добраться до моей студии:
-        div(class="map")
-            iframe(class="map__frame", src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12611.379727947122!2d-122.4220465!3d37.7936737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858092e7ee4833%3A0xba9adf323eff9155!2s1259+California+St%2C+San+Francisco%2C+CA+94109%2C+USA!5e0!3m2!1sen!2sru!4v1513867048557", allowfullscreen)
-            div(class="map__legend")
-                div(class="map__invite") Meet us!
-                div(class="map__adress") 1259 california st
-                    br/ san francisco, ca
-                div(class="map__icon")
-                    img(class="icon-image", src=require('../../blocks/map/images/icon-2.png'), alt="you are here")
-                div(class="map__icon map__icon_first")
-                    img(class="icon-image", src=require('../../blocks/map/images/icon-1.png'), alt="you are here")
-    div(class="contacts-mail-form") Можете написать мне письмо:
-        form(class="simple-form")
-            div(class="simple-form__message simple-form__message_color_red") error
-                div(class="simple-form__message-tail simple-form__message-tail_color_red")
-            input(class="simple-form__input-text", type="text", name="your-name", value="Your Name")/
-            div(class="simple-form__message simple-form__message_color_green") thanks!
-                div(class="simple-form__message-tail simple-form__message-tail_color_green")
-            input(class="simple-form__input-text", type="text", name="your-email", value="Your Email")/
-            textarea(class="simple-form__input-textarea") Your Message
-            div(class="simple-form__button")
-                input(class="std-button std-button_color_green", type="submit", value="submit")/
-    div(class="contacts-chat") Либо связаться со мной в чате:
-        div(class="chat__header-1") John Smith
-            div(class="chat__photo")
-            div(class="chat__icon chat__icon_left")
-            div(class="chat__icon chat__icon_right")
-        div(class="chat__header-2")
-        div(class="chat__body")
-            div(class="chat__message") Hey ! So are we cool to meet at the art gallery? Say 8pm
-                div(class="chat__message-tail")
-            textarea(class="chat__message-input") Yeah that sounds great. See you then.
-            button(class="std-button std-button_color_green std-button_theme_chat") reply
+    .contacts
+        .contacts__map Как добраться до моей студии:
+            +map({invite: "Meet us!", localAdress: "1259 california st", globalAdress: "san francisco, ca",
+                link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12611.379727947122!2d-122.4220465!3d37.7936737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858092e7ee4833%3A0xba9adf323eff9155!2s1259+California+St%2C+San+Francisco%2C+CA+94109%2C+USA!5e0!3m2!1sen!2sru!4v1513867048557"})
+        .contacts__mail-form Можете написать мне письмо:
+            +simple-form()
+        .contacts__chat Либо связаться со мной в чате:
+            +chat({name: "Sergio Ka", photo: "images/facepalm.png",
+                    message: "Hey ! So are we cool to meet at the art gallery? Say 8pm",
+                    inputPlaceholder: "Yeah that sounds great. See you then.",
+                    buttonSettings: {text:"Zapushit' v chat", color:"red", size:"", effect:"", activeStatus:""}
+                })
 
 block right-arr
-    div(class="navigation__arr-button")
-        +arr-button("right","#FFFFFF", "gray", "contacts.html")
-
-mixin arr-button(direction, arrcolor, color, href)
-    -var ppoints;
-    -(direction == "left")?ppoints = "18,11 8,21 18,31":ppoints="10,11 20,21 10,31";
-        a(class="navigation__link", href= href)
-            button(class="arr-button arr-button_color_"+color)
-                svg(class="arr-button__arrow")
-                    polyline(points= ppoints, fill="none", stroke-width="4", stroke= arrcolor)
+    .navigation__arr-button
+        a.navigation__link(href= "contacts.html")
+            +arrow-button({direction:"right", arrowColor:"#FFFFFF", buttonColor:"gray"})
