@@ -1,8 +1,6 @@
-require('webpack-jquery-ui/datepicker');
 require('webpack-jquery-ui/selectmenu');
-require('webpack-jquery-ui/slider');
 
-const requireAllFiles = function requireAll(requireContext) {
+const requireAllFiles = (requireContext) => {
   return requireContext.keys().map(requireContext);
 };
 

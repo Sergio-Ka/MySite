@@ -1,5 +1,5 @@
 class Selectmenu {
-    
+
   constructor($element) {
     this.$element = $element;
     this.initSelectmenu();
@@ -9,7 +9,7 @@ class Selectmenu {
     this.$element.selectmenu();
   }
 }
-    
-$('.js-selectmenu').each(function callback(index, domElement){
+
+$('.js-selectmenu').each((index, domElement) => {
   new Selectmenu($(domElement));
 });

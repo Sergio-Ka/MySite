@@ -1,7 +1,7 @@
 mixin pie-chart(options = [{color:"#E5E5E5", percent:100}])
     svg.pie-chart
         -let partOfCircle = 0, emptyPartOfCircle = 0, lastPartOfCircle = 0, dashOffSet = 0;
-        -options.forEach(function(item, i, arr) {
+        -options.forEach((item) => {
             -if (i == 0) {
                 circle.pie-chart__circle(stroke= item.color, r="39", cx="50%", cy="50%")
             -} else {

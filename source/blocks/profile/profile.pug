@@ -4,7 +4,7 @@ mixin profile(options = {photo: "images/photo-john-smith.png", photoPosition:"-1
         .profile__photo(style = `background-image: url(${photo}); background-position: ${photoPosition};`)
         .profile__content(class = `profile__content_theme_${theme}`)
             .profile__name(class = `profile__name_theme_${theme}`)= name
-            .profile__profession(class = `profile__post_theme_${theme}`)= profession
+            .profile__profession(class = `profile__profession_theme_${theme}`)= profession
             .profile__icons
                 -if (iconsTheme == "light") {
                     img.profile__icon(src=require('../../blocks/profile/images/facebook-white.png'), alt="FaceBook")

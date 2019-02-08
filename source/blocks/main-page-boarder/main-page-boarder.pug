@@ -1,0 +1,25 @@
+include ../../blocks/news/news.pug
+include ../../blocks/events/events.pug
+include ../../blocks/datepicker/datepicker.pug
+
+mixin main-page-boarder()
+    .main-page
+        .main-page__header На этой странице можете запланировать встречу со мной на определенное число, а так же посмотреть анонсы предстоящих событий и последние новости.
+        .main-page__positioner
+            .main-page__news Новости
+                +news({image:"images/news-photo.png", header: "It's all going downhill", date: "24 august 2013",
+                        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
+            .main-page__calendar Планировщик событий
+                +datepicker({prevText: "<",
+                            nextText: ">",
+                            currentText: "TODAY",
+                            dayNamesMin: [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ],
+                            dateFormat: "dd/mm/yy",
+                            firstDay: 1,
+                            altField: ".datepicker__digit",
+                            altFormat: "dd",
+                            showButtonPanel: "false"})
+            .main-page__events Предстоящие события
+                +events({image:"images/events-photo.png", day: "24", month: "Aug", title: "this is the title",
+                        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        buttonSettings: {text:"add to calendar", color:"green", size:"small", effect:"", activeStatus:"inactive"}})

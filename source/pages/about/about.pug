@@ -1,21 +1,21 @@
 extends ../template/template.pug
 
-include ../../blocks/video-frame/video-frame.pug
+include ../../blocks/navigation/navigation.pug
+include ../../blocks/about-boarder/about-boarder.pug
+
 
 block title
     | My Syte - ABOUT
 
-block left-arr
-    .navigation__arr-button
-        a.navigation__link(href= "index.html")
-            +arrow-button({direction:"left", arrowColor:"#4EB7A8", buttonColor:"white"})
+block navigation
+    +navigation([{link: "index.html", buttonSettings: {text:"main", color:"red", size:"", effect:"", activeStatus:""}},
+                {link: "about.html", buttonSettings: {text:"about", color:"green", size:"", effect:"", activeStatus:""}},
+                {link: "portfolio.html", buttonSettings: {text:"portfolio", color:"red", size:"", effect:"", activeStatus:""}},
+                {link: "contacts.html", buttonSettings: {text:"contacts", color:"red", size:"", effect:"", activeStatus:""}}
+                ])
 
 block content
-    .about Посмотрите это небольшое видео обо мне и моей деятельности:
-        .about__video
-            +video-frame({link:"https://player.vimeo.com/video/62980495", color: "E75735"})
+    +pageNavigation([{previousPageLink: "index.html", arrowButtonSettings: {direction:"left", arrowColor:"#4EB7A8", buttonColor:"white"}},
+                    {nextPageLink: "portfolio.html", arrowButtonSettings: {direction:"right", arrowColor:"#4EB7A8", buttonColor:"white"}}])
 
-block right-arr
-    .navigation__arr-button
-        a.navigation__link(href= "portfolio.html")
-            +arrow-button({direction:"right", arrowColor:"#4EB7A8", buttonColor:"white"})
+    +about-boarder()

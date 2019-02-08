@@ -8,6 +8,6 @@ mixin simple-form()
         .simple-form__message.simple-form__message_color_green thanks!
             .simple-form__message-tail.simple-form__message-tail_color_green
         input.simple-form__input-text(type="text", name="your-email", value="Your Email")/
-        textarea.simple-form__input-textarea Your Message
+        textarea.simple-form__input-textarea(name="your-message") Your Message
         .simple-form__button
             +standard-button({text:"submit", color:"green", size:"", effect:"", activeStatus:"", theme:""})

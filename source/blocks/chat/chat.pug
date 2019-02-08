@@ -12,6 +12,6 @@ mixin chat(options = {name: "Sarah Brown", photo: "images/photo-sarah-brown.png"
                 .chat__icon.chat__icon_right
             .chat__message= message
                 .chat__message-tail
-            textarea.chat__input= inputPlaceholder
+            textarea.chat__input(name= "chat-input", placeholder= inputPlaceholder)
             .chat__button
                 +standard-button(buttonSettings)

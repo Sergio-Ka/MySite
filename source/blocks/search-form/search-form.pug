@@ -1,9 +1,9 @@
 mixin search-form(options = {placeholder:"Search", errorStatus:false})
     -let {placeholder = "Search", errorStatus = false} = options;
     form.search
+        -const CSSClass = 'search__input';
         -if (errorStatus) {
-            input.search__input.search__input_color_red(type = "search", placeholder= placeholder, name = "keywords")
-        -} else {
-            input.search__input(type = "search", placeholder= placeholder, name = "keywords")
+            - CSSClass.concat(' search__input_color_red');
         -}
+        input.search__input(class = CSSClass, type = "search", placeholder= placeholder, name = "keywords")
         input.search__button(type = "submit", value = "")/

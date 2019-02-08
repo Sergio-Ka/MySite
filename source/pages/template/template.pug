@@ -1,6 +1,13 @@
+include ../../blocks/wrap/wrap.pug
 include ../../blocks/arrow-button/arrow-button.pug
-include ../../blocks/standard-button/standard-button.pug
-include ../navigation/navigation.pug
+
+mixin pageNavigation(options = [{previousPageLink: "index.html", arrowButtonSettings: {direction:"left", arrowColor:"#FFFFFF", buttonColor:"gray"}}, {nextPageLink: "about.html", arrowButtonSettings: {direction:"right", arrowColor:"#FFFFFF", buttonColor:"green"}}])
+    .wrap__left-navigation-arrow-block
+        a.wrap__link(href= options[0].previousPageLink)
+            +arrow-button(options[0].arrowButtonSettings)
+    .wrap__right-navigation-arrow-block
+        a.wrap__link(href= options[1].nextPageLink)
+            +arrow-button(options[1].arrowButtonSettings)
 
 doctype html
 html
@@ -15,19 +22,4 @@ html
         title
             block title
     body
-        main.wrap
-            include ../main-header/main-header.pug
-            nav.wrap__navigation
-                +navigation([{link: "index.html", buttonSettings: {text:"main", color:"green", size:"", effect:"ripple", activeStatus:""}},
-                            {link: "about.html", buttonSettings: {text:"about", color:"red", size:"small", effect:"ripple", activeStatus:""}},
-                            {link: "portfolio.html", buttonSettings: {text:"portfolio", color:"red", size:"small", effect:"", activeStatus:"inactive"}},
-                            {link: "contacts.html", buttonSettings: {text:"contacts", color:"green", size:"", effect:"", activeStatus:"inactive"}}
-                            ])
-            article.wrap__article
-                .wrap__content-left-block
-                    block left-arr
-                .wrap__content
-                    block content
-                .wrap__content-right-block
-                    block right-arr
-            include ../main-footer/main-footer.pug
+        +wrap()

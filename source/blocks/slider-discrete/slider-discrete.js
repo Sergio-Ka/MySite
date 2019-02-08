@@ -6,11 +6,13 @@ class SliderDescrete {
   }
 
   getSliderSettings() {
-    return {min: this.$element.data('min'),
+    return {
+      min: this.$element.data('min'),
       max: this.$element.data('max'),
       step: this.$element.data('step'),
       value: this.$element.data('value'),
-      range: this.$element.data('range'),}
+      range: this.$element.data('range'),
+    }
   }
 
   initSlider() {
@@ -25,6 +27,6 @@ class SliderDescrete {
   }
 }
 
-$('.js-slider-discrete').each(function callback(index, domElement){
+$('.js-slider-discrete').each((index, domElement) => {
   new SliderDescrete($(domElement));
 });

@@ -1,8 +1,8 @@
 mixin standard-button(options = {text:"button", color:"red", size:"", effect:"ripple", activeStatus:""})
     -let {text="button", color="red", size="", effect="ripple", activeStatus=""} = options;
-    -const cssClass = 'standard-button js-standard-button'.concat(
+    -const cssClass = 'standard-button'.concat(
     -` standard-button_color_${color}`,
     - activeStatus === "inactive" ? ` standard-button_inactive-${color}` : "",
     - size === "small" ? " standard-button_size_small" : "", 
-    - effect === "ripple" ? " standard-button_ripple-effect" : "");
+    - effect === "ripple" ? " standard-button_ripple-effect js-standard-button" : "");
     button(class= cssClass)= text

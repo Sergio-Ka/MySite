@@ -1,6 +1,6 @@
 mixin datepicker(options = {prevText: "<", nextText: ">", currentText: "TODAY", dayNamesMin: [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ], dateFormat: "dd/mm/yy", firstDay: 1, altField: ".datepicker__digit", altFormat: "dd", showButtonPanel: false})
     -let {prevText = "<", nextText = ">", currentText = "TODAY", dayNamesMin = [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ], dateFormat = "dd/mm/yy", firstDay = 1, altField = ".datepicker__digit", altFormat = "dd", showButtonPanel = false} = options;
-    form.datepicker.js-datepicker
+    .datepicker.js-datepicker
         input.datepicker__digit(disabled)
         .datepicker__body.js-datepicker__body(data-prevtext= prevText, data-nexttext= nextText, data-daynamesmin= dayNamesMin, data-dateformat= dateFormat, data-firstday= firstDay, data-altfield= altField, data-altformat= altFormat, data-showpanel= showButtonPanel)
         .datepicker__button.js-datepicker__button= currentText

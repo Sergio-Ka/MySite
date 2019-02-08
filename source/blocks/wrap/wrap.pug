@@ -1,0 +1,21 @@
+include ../profile/profile.pug
+include ../search-form/search-form.pug
+include ../selectmenu/selectmenu.pug
+
+mixin wrap()
+    main.wrap
+        header.wrap__header
+            .wrap__header-left-positioner
+                +profile({photo: "images/facepalm.png", photoPosition:"-1.444rem 0", name: "Sergio Ka", profession: "будущий frontender", theme: "light", iconsTheme: "dark"})
+            h1.wrap__header-title MySite
+            .wrap__header-right-positioner
+                +search-form({placeholder:"Search", errorStatus:false})
+                +selectmenu({selectedItem: 1, items:["Язык сайта","Русский","English","Deutsche","Esperanto"]})
+
+        nav.wrap__navigation
+            block navigation
+
+        article.wrap__content
+            block content
+            
+        footer.wrap__footer Copyright @ & Designed by Sergey Karbyshev
