@@ -16,7 +16,6 @@ class SliderWithPopUp {
       range: this.$element.data('range'),
       create: (event) => {
         const $sliderHandle = $(event.target).find('.ui-slider-handle');
-        const $sliderValue = $(event.target).find('.js-slider-value');
         $sliderHandle.append(`<input class="slider-value js-slider-value" value="${value}"/><div class="slider-value__tail"></div>`);
       },
       slide: (event, ui) => {
