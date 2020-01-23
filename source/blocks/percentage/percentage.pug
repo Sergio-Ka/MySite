@@ -1,5 +1,0 @@
-mixin percentage(percent)
-    -let markedSector = percent*295/100, unmarkedSector = 295 - markedSector, dasharray = `${markedSector} ${unmarkedSector}`;
-    svg.percentage
-        circle.percentage__circle(r="45", cx="50%", cy="50%", stroke-dasharray= dasharray)
-        text.percentage__text(text-anchor="middle", x="50%", y="64%")= (percent > 100) ? 'err.' : Math.round(percent*10)/10

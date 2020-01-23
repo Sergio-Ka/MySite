@@ -1,9 +1,0 @@
-include ../standard-button/standard-button.pug
-
-mixin navigation(options = [{link: "index.html", buttonSettings: {text:"main", color:"green", size:"", effect:"ripple", activeStatus:""}}])
-    .navigation
-        -options.forEach((item) => {
-            .navigation__standard-button
-                a.navigation__link(href= item.link)
-                    +standard-button(item.buttonSettings)
-        -});

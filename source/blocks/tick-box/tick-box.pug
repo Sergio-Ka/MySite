@@ -1,9 +1,0 @@
-mixin tick-box(options = {checked: false, id: "c1"})
-    -let {checked = false, id = "c1"} = options;
-    -if (checked) {
-        input.tick-box-input(type="checkbox", id= id, checked)/
-    -} else {
-        input.tick-box-input(type="checkbox", id= id)/
-    -}
-    label(for= id)
-        span.tick-box-circle-arrow
